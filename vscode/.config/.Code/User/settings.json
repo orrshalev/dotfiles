@@ -1,0 +1,136 @@
+{
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+  },
+  "python.languageServer": "Pylance",
+  "python.pythonPath": "C:\\Users\\shale\\anaconda3\\python.exe",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "python.defaultInterpreterPath": "C:\\Users\\shale\\anaconda3\\python.exe",
+  "security.workspace.trust.untrustedFiles": "open",
+  "remote.SSH.remotePlatform": {
+    "odin.cs.uga.edu": "linux",
+    "vcf0.cs.uga.edu": "linux"
+  },
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "C_Cpp.updateChannel": "Insiders",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "editor.fontLigatures": false,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "mssql.connections": [
+    {
+      "connectionString": "Server=localhost;Database=master;Trusted_Connection=True;",
+      "profileName": "Orr",
+      "database": "master",
+      "user": "",
+      "server": "localhost",
+      "authenticationType": "Integrated",
+      "password": ""
+    }
+  ],
+  "mssql.intelliSense.enableErrorChecking": false,
+  "editor.fontFamily": "'Cascadia Code PL', Consolas, 'Courier New', monospace",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "redhat.telemetry.enabled": true,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.colorCustomizations": {
+    "terminal.background": "#19171C",
+    "terminal.foreground": "#DEDAD0",
+    "terminalCursor.background": "#8B8792",
+    "terminalCursor.foreground": "#8B8792",
+    "terminal.ansiBlack": "#19171C",
+    "terminal.ansiBlue": "#576DDB",
+    "terminal.ansiBrightBlack": "#655F6D",
+    "terminal.ansiBrightBlue": "#576DDB",
+    "terminal.ansiBrightCyan": "#398BC6",
+    "terminal.ansiBrightGreen": "#2A9292",
+    "terminal.ansiBrightMagenta": "#955AE7",
+    "terminal.ansiBrightRed": "#BE4678",
+    "terminal.ansiBrightWhite": "#EFECF4",
+    "terminal.ansiBrightYellow": "#A06E3B",
+    "terminal.ansiCyan": "#398BC6",
+    "terminal.ansiGreen": "#2A9292",
+    "terminal.ansiMagenta": "#955AE7",
+    "terminal.ansiRed": "#BE4678",
+    "terminal.ansiWhite": "#8B8792",
+    "terminal.ansiYellow": "#A06E3B"
+  },
+  "explorer.confirmDelete": false,
+  "editor.inlineSuggest.enabled": true,
+  "omnisharp.useModernNet": false,
+  "editor.lineNumbers": "relative",
+  "editor.accessibilitySupport": "off",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true,
+  "vim.gdefault": true,
+  "vim.showMarksInGutter": true,
+  "vim.highlightedyank.enable": true,
+  "editor.colorDecorators": false,
+  "files.associations": {
+    "*.cjs": "javascript",
+    "*.mjs": "javascript"
+  },
+  "editor.minimap.enabled": false,
+  "workbench.sideBar.location": "right",
+  "javascript.format.semicolons": "insert",
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "workbench.colorTheme": "Default Dark+",
+  "terminal.integrated.defaultProfile.linux": "zsh"
+}
