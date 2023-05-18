@@ -31,4 +31,4 @@ if command -v bat &> /dev/null; then
   alias catt="bat --theme \"Visual Studio Dark+\"" 
 fi
 
-neofetch --disable packages --kitty source
+neofetch
