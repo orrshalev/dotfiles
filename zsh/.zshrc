@@ -10,7 +10,7 @@ plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/prompt.zsh"
 plug "$HOME/.config/zsh/shortcuts.zsh"
-plug "$HOME/.config/op/plugins.sh"
+plug "$HOME/.config/op/plugins.sh" &> /dev/null # OnePassword, idc if this fails
 
 # plugins
 plug "esc/conda-zsh-completion"
@@ -31,4 +31,4 @@ if command -v bat &> /dev/null; then
   alias catt="bat --theme \"Visual Studio Dark+\"" 
 fi
 
-neofetch --disable packages --kitty source
+neofetch

@@ -20,6 +20,11 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
+alias neofetch="neofetch --disable packages --kitty source"
+
+# ls shortcuts
+alias lsa="ls -a"
+
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
