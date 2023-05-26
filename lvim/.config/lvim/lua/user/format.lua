@@ -1,6 +1,6 @@
 lvim.format_on_save = {
 	enabled = true,
-	pattern = "*.lua",
+	pattern = "*",
 	timeout = 1000,
-	formatter = "stylua",
+	filter = require("lvim.lsp.utils").format_filter,
 }
