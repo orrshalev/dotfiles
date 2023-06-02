@@ -26,10 +26,11 @@
   "gitlens.codeLens.scopes": ["document", "containers", "blocks"],
   "gitlens.statusBar.enabled": false,
   /* visual */
+  "errorLens.gutterIconsEnabled": true,
   "workbench.sideBar.location": "right",
   "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "eq-material-theme-icons",
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "editor.fontFamily": "'Cascadia Code PL', Consolas, 'Courier New', monospace",
   /* terminal */
   "terminal.integrated.fontSize": 16,
@@ -58,6 +59,9 @@
   },
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   /* javascript */
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -137,6 +141,10 @@
       "commands": ["workbench.action.openGlobalKeybindings"]
     },
     {
+      "before": ["<leader>", "s", "c"],
+      "commands": ["workbench.action.openGlobalKeybindings"]
+    },
+    {
       "before": ["<leader>", "s", "C"],
       "commands": ["workbench.action.openGlobalKeybindingsFile"]
     },
@@ -195,6 +203,10 @@
     {
       "before": ["<leader>", "d", "o"],
       "commands": ["workbench.action.debug.stepOver"]
+    },
+    {
+      "before": ["<leader>", "t", "s"],
+      "commands": ["testing.runCurrentFile"]
     },
     {
       "before": ["<leader>", "e"],
@@ -271,5 +283,12 @@
   "editor.minimap.enabled": false,
   /* C# */
   "omnisharp.useModernNet": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "explorer.confirmDragAndDrop": false,
+  /* jupyter */
+  "jupyter.enableExtendedKernelCompletions": true,
+  "jupyter.interactiveWindow.textEditor.autoMoveToNextCell": false,
+  "jupyter.interactiveWindow.textEditor.autoAddNewCell": false,
+  "jupyter.showVariableViewWhenDebugging": true,
+  "notebook.lineNumbers": "on",
 }
