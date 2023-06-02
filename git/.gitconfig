@@ -1,0 +1,12 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Orr Shalev
+	email = shalev.orr@gmail.com
+[core]
+	editor = lvim
+[alias]
+	lol = log --oneline --graph --all
