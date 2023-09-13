@@ -10,3 +10,5 @@
 	editor = lvim
 [alias]
 	lol = log --oneline --graph --all
+[credential]
+	helper = store

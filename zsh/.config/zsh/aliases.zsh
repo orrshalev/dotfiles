@@ -7,7 +7,7 @@ alias lvimrc='nvim ~/dotfiles/lvim'
 alias yay="paru"
 
 # replacement commands
-alias vim="lvim"
+alias vim="nvim"
 alias ls="exa"
 
 # Colorize grep output (good for log files)

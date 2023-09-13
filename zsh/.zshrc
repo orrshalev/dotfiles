@@ -32,3 +32,17 @@ if command -v bat &> /dev/null; then
 fi
 
 neofetch
+
+# pnpm
+export PNPM_HOME="/home/orrshalev/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+# bun completions
+[ -s "/home/orrshalev/.bun/_bun" ] && source "/home/orrshalev/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
