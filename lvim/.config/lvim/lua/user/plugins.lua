@@ -13,7 +13,16 @@ lvim.plugins = {
   { "williamboman/mason.nvim" },
   { "mfussenegger/nvim-dap" },
   { "jay-babu/mason-nvim-dap.nvim" },
-  { "github/copilot.vim" }
+  { "github/copilot.vim" },
+  {
+    "ggandor/leap.nvim",
+    dependencies = {
+      "tpope/vim-repeat"
+    },
+    config = function()
+      require('leap').add_default_mappings()
+    end
+  }
 }
 
 lvim.builtin.telescope.on_config_done = function(telescope)
