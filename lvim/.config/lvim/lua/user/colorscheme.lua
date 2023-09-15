@@ -1,5 +1,5 @@
 local themes = {
-	tokyonight = "tokyonight",
+  tokyonight = "tokyonight",
 }
 
 lvim.colorscheme = themes.tokyonight

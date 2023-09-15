@@ -1,15 +1,16 @@
 lvim.format_on_save = {
-	enabled = true,
-	pattern = "*",
-	timeout = 1000,
-	filter = require("lvim.lsp.utils").format_filter,
+  enabled = true,
+  pattern = "*",
+  timeout = 1000,
+  filter = require("lvim.lsp.utils").format_filter,
 }
 
 local status, formatters = pcall(require, "lvim.lsp.null-ls.formatters")
 if not status then
-	return
+  return
 end
 
 formatters.setup({
-	{ command = "black", filetypes = { "python" } },
+  -- { command = "black", filetypes = { "python" } },
+  { name = "stylua" },
 })

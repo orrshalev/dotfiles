@@ -15,14 +15,19 @@ lvim.plugins = {
   { "jay-babu/mason-nvim-dap.nvim" },
   { "github/copilot.vim" },
   {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
     "ggandor/leap.nvim",
     dependencies = {
-      "tpope/vim-repeat"
+      "tpope/vim-repeat",
     },
     config = function()
-      require('leap').add_default_mappings()
-    end
-  }
+      require("leap").add_default_mappings()
+    end,
+  },
 }
 
 lvim.builtin.telescope.on_config_done = function(telescope)
