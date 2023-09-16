@@ -4,7 +4,7 @@ local options = {
   relativenumber = true,
   mouse = "",
   backup = false,
-  clipboard = "unnamedplus",
+  -- clipboard = "unnamedplus",
   cmdheight = 2,
   completeopt = { "menuone", "noselect" },
   conceallevel = 0,
@@ -39,10 +39,17 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+local g_options = {
+  copilot_assume_mapped = true, -- needed for copilot to work
+}
+
+for k, v in pairs(g_options) do
+  vim.g[k] = v
+end
+
 lvim.log.level = "info"
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
--- lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 

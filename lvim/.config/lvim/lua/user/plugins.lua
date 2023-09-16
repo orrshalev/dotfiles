@@ -19,6 +19,12 @@ lvim.plugins = {
     event = "VeryLazy",
     opts = {},
   },
+  { "folke/persistence.nvim", event = "BufReadPre", opts = {} },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+  },
   {
     "ggandor/leap.nvim",
     dependencies = {
@@ -27,6 +33,11 @@ lvim.plugins = {
     config = function()
       require("leap").add_default_mappings()
     end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
   },
 }
 

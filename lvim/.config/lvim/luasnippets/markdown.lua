@@ -1,10 +1,11 @@
+-- TODO: Kill me
+-- FIX: something important
 return {
   -- \frac
   s(
     {
       trig = "ff",
       dscr = "Expands 'ff' into '\frac{}{}'",
-      snippetType = "autosnippet",
     },
     fmt(
       "\\frac{<>}{<>}",
