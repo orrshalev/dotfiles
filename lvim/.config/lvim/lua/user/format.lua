@@ -11,6 +11,6 @@ if not status then
 end
 
 formatters.setup({
-  -- { command = "black", filetypes = { "python" } },
+  { name = "black", filetypes = { "python" } },
   { name = "stylua" },
 })

@@ -19,6 +19,7 @@ lvim.plugins = {
     event = "VeryLazy",
     opts = {},
   },
+  { "nvim-telescope/telescope-project.nvim" },
   { "folke/persistence.nvim", event = "BufReadPre", opts = {} },
   {
     "folke/trouble.nvim",
@@ -43,4 +44,5 @@ lvim.plugins = {
 
 lvim.builtin.telescope.on_config_done = function(telescope)
   pcall(telescope.load_extension, "frecency")
+  pcall(telescope.load_extension, "project")
 end

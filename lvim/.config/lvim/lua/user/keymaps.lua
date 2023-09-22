@@ -1,3 +1,5 @@
+local icons = require("user.icons")
+
 lvim.leader = "space"
 
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
@@ -7,6 +9,12 @@ lvim.keys.insert_mode["jh"] = "<Esc>"
 
 -- Disable cmp completion with tab - important to not interfere with Copilot
 lvim.builtin.cmp.mapping["<Tab>"] = nil
+
+-- lsp
+lvim.lsp.buffer_mappings.normal_mode["gr"] = {
+  "<cmd>lua require('telescope.builtin').lsp_references()<CR>",
+  icons.cmp_kind.Reference .. " Find References",
+}
 
 -- WhichKey mappings for things that start with <leader>
 lvim.builtin.which_key.mappings["P"] = {
@@ -41,3 +49,6 @@ lvim.builtin.which_key.mappings["S"] = { -- persistence.nvim
     "Load last session",
   },
 }
+lvim.builtin.which_key.mappings["a"] =
+  { "<cmd>Alpha<cr>", icons.icons.screen .. "Dasboard" }
+lvim.builtin.which_key.mappings["G"] = { "<cmd>Copilot panel<cr>", "Copilot" }

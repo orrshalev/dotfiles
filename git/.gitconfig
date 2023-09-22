@@ -12,3 +12,5 @@
 	lol = log --oneline --graph --all
 [credential]
 	helper = store
+[pull]
+	rebase = false

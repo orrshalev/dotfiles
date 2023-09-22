@@ -85,6 +85,11 @@ local buttons = {
       ":ene <BAR> startinsert <CR>"
     ),
     button(
+      "p",
+      " " .. icons.cmp_kind.Module .. " Projects",
+      ":lua require'telescope'.extensions.project.project{}<cr>"
+    ),
+    button(
       "s",
       " " .. icons.icons.magic .. " Last Session",
       ":lua require('persistence').load({last = true})<cr>"

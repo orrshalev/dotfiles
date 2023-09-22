@@ -30,8 +30,6 @@ if command -v bat &> /dev/null; then
   alias catt="bat --theme \"Visual Studio Dark+\"" 
 fi
 
-neofetch
-
 # pnpm
 export PNPM_HOME="/home/orrshalev/.local/share/pnpm"
 case ":$PATH:" in
