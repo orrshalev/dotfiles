@@ -1,5 +1,3 @@
--- TODO: Kill me
--- FIX: something important
 return {
   -- \frac
   s(
