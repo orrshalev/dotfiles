@@ -23,6 +23,9 @@ alias psmem='ps auxf | sort -nr -k 4 | head -5'
 # get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
+alias upgrade='sudo dnf upgrade --refresh'
+alias szshrc='source $HOME/.zshrc'
+
 if [[ $TERM == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
 fi
