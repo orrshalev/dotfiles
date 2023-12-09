@@ -26,6 +26,11 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 alias upgrade='sudo dnf upgrade --refresh'
 alias szshrc='source $HOME/.zshrc'
 
+function gitdc() {
+  git add .
+  git commit -m "idc"
+}
+
 if [[ $TERM == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
 fi

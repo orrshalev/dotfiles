@@ -9,6 +9,7 @@ export PATH="/lib/jvm/graalvm-community-openjdk-20.0.2+9.1/bin":$PATH
 export PATH="/usr/lib/kotlinc/bin":$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.local/bin/mx/:$PATH"
 export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-21.0.0.0.35-1.rolling.fc38.x86_64"
 export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=header,grid --line-range :500 {}'"
 export FZF_COMPLETION_TRIGGER='~~'

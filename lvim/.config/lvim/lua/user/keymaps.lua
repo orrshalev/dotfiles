@@ -7,6 +7,14 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.insert_mode["hj"] = "<Esc>"
 lvim.keys.insert_mode["jh"] = "<Esc>"
 
+
+lvim.builtin.which_key.mappings[";"] = { -- toggle spellcheck
+  function()
+    vim.opt.spell = not vim.opt.spell:get()
+  end,
+  "Spellcheck",
+}
+
 -- Disable cmp completion with tab - important to not interfere with Copilot
 lvim.builtin.cmp.mapping["<Tab>"] = nil
 
@@ -20,6 +28,10 @@ lvim.lsp.buffer_mappings.normal_mode["gr"] = {
 lvim.builtin.which_key.mappings["P"] = {
   "<cmd>lua require'telescope'.extensions.project.project{}<CR>",
   "Projects",
+}
+lvim.builtin.which_key.mappings["m"] = {
+  "<cmd>silent !make<CR>",
+  "Make",
 }
 lvim.builtin.which_key.mappings["t"] = { -- trouble.nvim
   name = "Trouble",
@@ -50,5 +62,5 @@ lvim.builtin.which_key.mappings["S"] = { -- persistence.nvim
   },
 }
 lvim.builtin.which_key.mappings["a"] =
-  { "<cmd>Alpha<cr>", icons.icons.screen .. "Dasboard" }
+{ "<cmd>Alpha<cr>", icons.icons.screen .. "Dasboard" }
 lvim.builtin.which_key.mappings["G"] = { "<cmd>Copilot panel<cr>", "Copilot" }
