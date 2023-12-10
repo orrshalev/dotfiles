@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'
