@@ -42,7 +42,7 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-(setq auth-sources '("~/.authinfo.gpg"))
+(setq auth-sources '("~/.authinfo"))
 
 ;; (after! evil-multiedit (evil-multiedit-default-keybinds))
 ;;
