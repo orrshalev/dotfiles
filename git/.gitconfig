@@ -7,7 +7,7 @@
 	name = Orr Shalev
 	email = shalev.orr@gmail.com
 [core]
-	editor = lvim
+	editor = nvim
 [alias]
 	lol = log --oneline --graph --all
 [credential]
