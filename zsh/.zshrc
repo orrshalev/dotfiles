@@ -28,3 +28,6 @@ bindkey '^ ' autosuggest-accept
 
 # Program ad-ons
 source "$HOME/.config/zsh/adons.zsh"
+
+# bun completions
+[ -s "/home/orr/.bun/_bun" ] && source "/home/orr/.bun/_bun"
