@@ -80,6 +80,12 @@
 ;; they are implemented.
 
 ;; org test
+
+;; (orr/configure-based-on-hostname
+;;  '((doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 13)))
+;;  '((doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 18)))
+;; )
+
 (use-package! org
   :config
   (custom-set-faces

@@ -13,6 +13,22 @@
 ;;
 ;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
 ;;      directory (for easy access to its source code).
+;;
+;;
+
+(defun orr/configure-based-on-hostname (assignments-computer-1 assignments-computer-2)
+  (let ((hostname-assignments (cond
+                               ((string= (system-name) "desktop-fedorra")
+                                assignments-computer-1)
+                               ((string= (system-name) "laptop-fedorra")
+                                assignments-computer-2))))
+    (dolist (assignment hostname-assignments)
+      (set (car assignment) (cadr assignment)))))
+
+(orr/configure-based-on-hostname
+ '(( python-tree-sitter +tree-sitter ))
+ '((python-tree-sitter nil)))
+
 
 (doom! :input
        ;;bidi              ; (tfel ot) thgir etirw uoy gnipleh
@@ -157,7 +173,7 @@
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp +pyright +tree-sitter)       ; beautiful is better than ugly
+       (python +lsp +pyright (python-tree-sitter))       ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
