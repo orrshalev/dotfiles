@@ -123,3 +123,9 @@
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
+(defun disable-copilot-in-emacs-lisp-mode ()
+  "Disable copilot-mode when entering emacs-lisp-mode."
+  (when (and (boundp 'copilot-mode) copilot-mode)
+    (copilot-mode -1)))
+
+(add-hook 'emacs-lisp-mode-hook 'disable-copilot-in-emacs-lisp-mode)
