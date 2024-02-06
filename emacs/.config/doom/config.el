@@ -101,8 +101,12 @@
 (setq
  doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font")
  global-prettify-symbols-mode t
+<<<<<<< HEAD
  doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 13)
  )
+=======
+ doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 13))
+>>>>>>> 036eeda26114500c4752f0a3b3ae1eb719c6b400
 
 ;; accept completion from copilot and fallback to company
 (use-package! copilot
