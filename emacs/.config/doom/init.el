@@ -16,19 +16,6 @@
 ;;
 ;;
 
-(defun orr/configure-based-on-hostname (assignments-computer-1 assignments-computer-2)
-  (let ((hostname-assignments (cond
-                               ((string= (system-name) "desktop-fedorra")
-                                assignments-computer-1)
-                               ((string= (system-name) "laptop-fedorra")
-                                assignments-computer-2))))
-    (dolist (assignment hostname-assignments)
-      (set (car assignment) (cadr assignment)))))
-
-(orr/configure-based-on-hostname
- '(( python-tree-sitter +tree-sitter ))
- '((python-tree-sitter nil)))
-
 
 (doom! :input
        ;;bidi              ; (tfel ot) thgir etirw uoy gnipleh
@@ -93,7 +80,7 @@
        ;;eshell            ; the elisp shell that works everywhere
        ;;shell             ; simple shell REPL for Emacs
        ;;term              ; basic terminal emulator for Emacs
-       vterm             ; the best terminal emulation in Emacs
+       ;; vterm             ; the best terminal emulation in Emacs
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
@@ -108,7 +95,7 @@
        ;;direnv
        ;;docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
-       ;;ein               ; tame Jupyter notebooks with emacs
+       ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
@@ -169,11 +156,11 @@
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
-       (org +present +pretty)       ; organize your plain life in plain text
+       (org +pandoc +present +pretty +jupyter)       ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp +pyright (python-tree-sitter))       ; beautiful is better than ugly
+       (python +lsp +pyright +tree-sitter)       ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6

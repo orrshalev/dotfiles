@@ -3,22 +3,6 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-;; Define a variable to store the font specification
-(defvar orr-doom-font nil)
-
-;; Check the hostname
-(cond
-  ((string-equal system-name "desktop-fedorra")
-   (setq orr-doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 13)))
-  ((string-equal system-name "laptop-fedorra")
-   (setq orr-doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 18)))
-  (t
-   (setq orr-doom-font nil))) ; Set to nil if the hostname doesn't match
-
-;; Now, you can use `my-doom-font` as the font specification for `doom-font`
-(setq doom-font orr-doom-font)
-
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Orr Shalev"
@@ -101,6 +85,9 @@
 ;;  '((doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 18)))
 ;; )
 
+(after! ein (setq ein:jupyter-server-use-subcommand "server"
+                  ein:output-area-inlined-images t))
+
 (use-package! org
   :config
   (custom-set-faces
@@ -113,7 +100,9 @@
 
 (setq
  doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font")
- global-prettify-symbols-mode t)
+ global-prettify-symbols-mode t
+ doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 13)
+ )
 
 ;; accept completion from copilot and fallback to company
 (use-package! copilot
