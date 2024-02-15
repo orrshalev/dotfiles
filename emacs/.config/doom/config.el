@@ -96,7 +96,7 @@
    '(org-level-3 ((t (:inherit outline-3 :height 1.1))))
    '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
    '(org-level-5 ((t (:inherit outline-5 :height 1.0)))))
-)
+  )
 
 (setq
  doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font")
@@ -118,3 +118,9 @@
     (copilot-mode -1)))
 
 (add-hook 'emacs-lisp-mode-hook 'disable-copilot-in-emacs-lisp-mode)
+
+
+(custom-set-faces! ; for switch window
+  '(aw-leading-char-face
+    :foreground "white" :background "red"
+    :weight bold :height 2.5 :box (:line-width 10 :color "red")))
