@@ -126,7 +126,21 @@
     :weight bold :height 2.5 :box (:line-width 10 :color "red")))
 
 (after! org
-  (setq org-agenda-files '("~/notes/agenda.org")))
+  (setq org-agenda-files '("~/notes/agenda" "~/notes/agenda/weekly")))
 
 (set-frame-parameter nil 'alpha-background 65)
 (add-to-list 'default-frame-alist '(alpha-background . 65))
+
+(add-to-list 'doom-modeline-continuous-word-count-modes 'latex-mode)
+(setq doom-modeline-enable-word-count t)
+
+                                        ; alt+vim motion to move windows
+(evil-define-key 'normal 'global (kbd "M-h") 'evil-window-left)
+
+(evil-define-key 'normal 'global (kbd "M-j") 'evil-window-down)
+
+(evil-define-key 'normal 'global (kbd "M-k") 'evil-window-up)
+
+(evil-define-key 'normal 'global (kbd "M-l") 'evil-window-right)
+
+(evil-define-key 'normal 'global (kbd "M-c") 'evil-window-delete)
