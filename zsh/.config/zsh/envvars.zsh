@@ -6,6 +6,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$HOME/.local/bin/mx/:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
 
 # Editors
 if command -v lvim >/dev/null 2>&1; then

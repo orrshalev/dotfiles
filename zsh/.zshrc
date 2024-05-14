@@ -36,3 +36,11 @@ source "$HOME/.config/zsh/adons.zsh"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/orrshalev/.sdkman"
+[[ -s "/home/orrshalev/.sdkman/bin/sdkman-init.sh" ]] && source "/home/orrshalev/.sdkman/bin/sdkman-init.sh"
+
+eval "$(direnv hook zsh)"
