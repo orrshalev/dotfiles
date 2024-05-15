@@ -4,6 +4,10 @@ if command -v bat &> /dev/null; then
   alias cat="bat -pp"
   alias catt="bat --theme \"Visual Studio Dark+\""
 fi
+if command -v batcat &> /dev/null; then
+  alias cat="batcat -pp"
+  alias catt="batcat --theme \"Visual Studio Dark+\""
+fi
 
 if command -v lvim &> /dev/null; then
     alias vim="lvim"
