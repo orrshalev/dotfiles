@@ -15,24 +15,24 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
-set $browser google-chrome-stable
+set $browser firefox
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show drun | xargs swaymsg exec --
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/orr/Pictures/Wallpapers/wallhaven-md27xm.jpg fill
+output * bg /home/orrshalev/Pictures/Wallpapers/abstract.png fill
 #
 # Example configuration:
 #
-set $out-left DP-2
-set $out-right DP-3
+set $out-left DP-3
+set $out-right DP-2
 
-output $out-left resolution 1920x1080@144Hz position 0,310
-output $out-right resolution 2560x1440@165Hz position 1920,0
+output $out-left resolution 2560x1440@165Hz position 0,0
+output $out-right resolution 1920x1080@144Hz position 2560,310
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -83,12 +83,8 @@ bar {
     bindsym $mod+c kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+w exec $menu
 
-    # Sleep the system
-    bindsym $mod+z exec systemctl suspend
-    bindsym $mod+p exec reboot
-    
     # Start emacs
     bindsym $mod+e exec emacsclient -c -a ""
 
@@ -102,8 +98,6 @@ bar {
     # Reload the configuration file
     bindsym $mod+g reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -176,8 +170,8 @@ bar {
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+t layout toggle split
+    bindsym $mod+t layout tabbed
+    bindsym $mod+Shift+t layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -226,6 +220,20 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+#
+# Resizing containers:
+#
+mode "onoff" {
+    bindsym z exec systemctl suspend
+    bindsym p exec systemctl poweroff
+    bindsym r exec reboot
+    bindsym e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+o mode "onoff"
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
