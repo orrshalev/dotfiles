@@ -95,4 +95,4 @@
 
 (after! org
   (setq org-format-latex-options
-        (plist-put org-format-latex-options :scale 3.5)))
+        (plist-put org-format-latex-options :scale 2.5)))
