@@ -19,3 +19,8 @@ export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=header,grid --lin
 export FZF_COMPLETION_TRIGGER='~~'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 export FZF_DEFAULT_COMMAND="fd --type f"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
