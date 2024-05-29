@@ -1,0 +1,84 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height
+    "margin": "20 30 0 30",
+    // "width": 120, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/window", "clock"],
+    "modules-center": ["sway/workspaces", "sway/mode", "custom/media"],
+    "modules-right": ["cpu", "tray"],
+    "mode": {},
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "disable-markup": false,
+        "format": "  {icon}  ",
+        "persistent-workspaces": {
+            "1": ["DP-2"],
+            "2": ["DP-2"],
+            "3": ["DP-2"],
+            "4": ["DP-2"],
+            "5": ["DP-2"],
+            "6": ["DP-3"],
+            "7": ["DP-3"],
+            "8": ["DP-3"],
+            "9": ["DP-3"],
+            "10": ["DP-3"]
+        },
+        //"format":"{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "󰘐",
+            "9": "",
+            "10": "󱢫"
+        }
+    },
+    "sway/window": {
+        "max-length": 50
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\"><span color=\"#ff79c6\"></span>  {}</span>", // Icon: expand-arrows-alt
+        "tooltip": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "interval": 1,
+        "format": "<span color=\"#ff5555\"></span>  {:%H : %M : %S}",
+        "format-alt": "<span color=\"#bd93f9\"></span>   {:%d / %m / %Y}"
+    },
+    "clock#time": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "tooltip": false
+    },
+
+    "clock#date": {
+        "interval": 10,
+        "format": "  {:%e %b %Y}", // Icon: calendar-alt
+        "tooltip-format": "{:%e %B %Y}",
+        "on-click": "~/work/scripts/popup-calendar.sh --popup"
+    },
+    "cpu": {
+        "format": "<span color=\"#f1fa8c\"></span>  {usage}%  ({load})"
+    },
+    "memory": {
+        "format": "{}% "
+    }
+}

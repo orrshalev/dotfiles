@@ -16,10 +16,10 @@
 
 
 (setq
- doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font")
+ doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font Propo")
  global-prettify-symbols-mode t
- doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 13)
- )
+ doom-font (font-spec :family "CaskaydiaCove Nerd Font Propo" :size 13))
+
 
 ;; org
 (setq org-directory "~/org/")
@@ -31,8 +31,8 @@
    '(org-level-2 ((t (:inherit outline-2 :height 1.2))))
    '(org-level-3 ((t (:inherit outline-3 :height 1.1))))
    '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
-   '(org-level-5 ((t (:inherit outline-5 :height 1.0)))))
-  )
+   '(org-level-5 ((t (:inherit outline-5 :height 1.0))))))
+
 
 ;; copilot
 
