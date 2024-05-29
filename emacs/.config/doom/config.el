@@ -20,6 +20,16 @@
  global-prettify-symbols-mode t
  doom-font (font-spec :family "CaskaydiaCove Nerd Font Propo" :size 13))
 
+(defun toggle-frame-opacity ()
+  "Toggle the current frame's opacity between 100 and 85."
+  (interactive)
+  (let* ((parameter
+          (if (eq window-system 'pgtk)
+              'alpha-background
+            'alpha))
+         (current-opacity (or (frame-parameter nil parameter) 100))
+         (new-opacity (if (= current-opacity 100) 85 100)))
+    (set-frame-parameter nil parameter new-opacity)))
 
 ;; org
 (setq org-directory "~/org/")
@@ -33,6 +43,9 @@
    '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
    '(org-level-5 ((t (:inherit outline-5 :height 1.0))))))
 
+(map! :leader
+      (:prefix ("t" . "toggle")
+       :desc "Opaque" "o" #'toggle-frame-opacity))
 
 ;; copilot
 
