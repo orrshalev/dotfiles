@@ -174,7 +174,7 @@ bindsym $mod+r mode "resize"
 mode "onoff" {
     bindsym p exec systemctl poweroff
     bindsym r exec reboot
-    bindsym e exec swaynag exit
+    bindsym e exec swaymsg exit
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
