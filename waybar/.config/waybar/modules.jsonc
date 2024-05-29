@@ -1,8 +1,12 @@
-// Modules configuration
 {
   "sway/window": {
-    "max-length": 50,
-    "all-outputs": true
+    "format": "<span color=\"#ff79c6\"></span>  {title}",
+    "min-length": 30,
+    "max-length": 30,
+    "all-outputs": true,
+    "rewrite": {
+      "(.*) - Mozilla Firefox": "󰈹 $1"
+    }
   },
   "sway/mode": {
     "format": "<span style=\"italic\"><span color=\"#ff79c6\"></span>  {}</span>", // Icon: expand-arrows-alt

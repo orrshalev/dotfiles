@@ -45,7 +45,7 @@
         // "width": 120, // Waybar width
         // Choose the order of the modules
         "include": "$HOME/.config/waybar/modules.jsonc",
-        "modules-left": ["sway/window", "clock"],
+        "modules-left": ["sway/window"],
         "modules-center": ["sway/workspaces", "sway/mode"],
         "modules-right": ["cpu", "memory"],
         "mode": {},
