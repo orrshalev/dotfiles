@@ -9,6 +9,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
 
+
 # Editors
 if command -v lvim >/dev/null 2>&1; then
     export EDITOR='lvim'
