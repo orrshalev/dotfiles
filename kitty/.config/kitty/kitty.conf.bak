@@ -22,6 +22,6 @@ startup_session ./default_session.conf
 
 
 # BEGIN_KITTY_THEME
-# Doom One
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
