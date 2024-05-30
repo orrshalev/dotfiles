@@ -15,7 +15,7 @@ set $browser firefox
 set $menu wofi --show drun | xargs swaymsg exec --
 
 ### Wallpaper
-output * bg /home/orrshalev/Pictures/Wallpapers/abstract.png fill
+output * bg /home/orrshalev/Pictures/Wallpapers/windows.png fill
 
 # Output
 set $out-right DP-3

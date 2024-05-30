@@ -36,7 +36,7 @@
 
   "clock#date": {
     "interval": 10,
-    "format": "  {:%e %b %Y}", // Icon: calendar-alt
+    "format": "  {:%b %e %Y}", // Icon: calendar-alt
     "tooltip-format": "{:%e %B %Y}"
     // "on-click": "~/work/scripts/popup-calendar.sh --popup"
   },
