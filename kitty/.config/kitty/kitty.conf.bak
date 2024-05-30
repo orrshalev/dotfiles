@@ -2,6 +2,7 @@ font_family     CaskaydiaCove Nerd Font
 font_size                  10
 background_opacity         0.8
 dynamic_background_opacity yes
+enable_audio_bell no
 
 map alt+l next_window
 map alt+h previous_window
@@ -18,10 +19,3 @@ map alt+q quit
 
 
 startup_session ./default_session.conf
-
-
-
-# BEGIN_KITTY_THEME
-# Tokyo Night
-include current-theme.conf
-# END_KITTY_THEME

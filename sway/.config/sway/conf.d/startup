@@ -1,0 +1,6 @@
+workspace 6
+exec emacs --daemon
+workspace 1
+exec kitty
+workspace 7
+exec firefox --new-window https://d2l.ai/chapter_linear-classification/index.html

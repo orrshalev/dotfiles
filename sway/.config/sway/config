@@ -15,7 +15,8 @@ set $browser firefox
 set $menu wofi --show drun | xargs swaymsg exec --
 
 ### Wallpaper
-output * bg /home/orrshalev/Pictures/Wallpapers/windows.png fill
+set $wallpapers_path $HOME/Pictures/Wallpapers
+output * bg `find $wallpapers_path -type f | shuf -n 1` fill
 
 # Output
 set $out-right DP-3
@@ -171,7 +172,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-mode "onoff" {
+mode "power" {
     bindsym p exec systemctl poweroff
     bindsym r exec reboot
     bindsym e exec swaymsg exit
@@ -179,7 +180,7 @@ mode "onoff" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+o mode "onoff"
+bindsym $mod+o mode "power"
 
 
 
@@ -214,3 +215,4 @@ exec_always {
 }
 
 include /etc/sway/config.d/*
+include conf.d/startup

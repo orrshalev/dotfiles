@@ -40,7 +40,6 @@
 
        :term
        eshell            ; the elisp shell that works everywhere
-       vterm             ; the best terminal emulation in Emacs
 
        :checkers
        (syntax +childframe)              ; tasing you for every semicolon you forget
