@@ -13,6 +13,9 @@ if command -v lvim &> /dev/null; then
     alias vim="lvim"
 fi
 
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init --cmd cd zsh)"
+fi
 
 if command -v eza &> /dev/null; then
     alias ls="eza --icons --color=auto"

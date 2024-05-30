@@ -35,8 +35,8 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-    border-bottom: 2px solid #ff79c6;
-    color: #ff79c6;
+    border-bottom: 2px solid #51afef;
+    color: #51afef;
 }
 
 #workspaces button.urgent {
@@ -46,7 +46,7 @@ window#waybar.hidden {
 #workspaces button:hover {
     box-shadow: none;
     text-shadow: none;
-    border-bottom: 2px solid #ff79c6;
+    border-bottom: 2px solid #51afef;
 }
 
 #window {
@@ -89,15 +89,6 @@ window#waybar.hidden {
         background-color: #ffffff;
         color: #000000;
     }
-}
-
-#battery.critical:not(.charging) {
-    background: #f53c3c;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #cpu {
