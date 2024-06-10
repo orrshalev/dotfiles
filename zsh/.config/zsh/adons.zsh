@@ -23,8 +23,7 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
@@ -38,4 +37,4 @@ export NVM_DIR="$HOME/.nvm"
 export HSA_OVERRIDE_GFX_VERSION=10.3.0
 
 # direnv
-eval "$(direnv hook zsh)"
+command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
