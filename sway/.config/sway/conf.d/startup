@@ -1,7 +1,8 @@
 workspace 6
 exec emacs --daemon
+workspace 3
+exec firefox --new-window https://www.youtube.com
 workspace 1
 exec kitty
 workspace 7
-exec firefox --new-window https://d2l.ai/chapter_multilayer-perceptrons/index.html
-exec firefox --new-tab https://d2l.ai/chapter_linear-classification/environment-and-distribution-shift.html#covariate-shift-correction
+exec firefox --new-window https://d2l.ai/chapter_recurrent-modern/index.html
