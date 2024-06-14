@@ -1,8 +1,13 @@
 workspace 6
 exec emacs --daemon
 workspace 3
-exec firefox --new-window https://www.youtube.com
+exec brave-browser --new-window https://www.youtube.com
+workspace 8
+exec code
+workspace 5
+exec /var/lib/flatpak/app/com.spotify.Client/current/active/export/bin/com.spotify.Client
 workspace 1
 exec kitty
 workspace 7
-exec firefox --new-window https://d2l.ai/chapter_recurrent-modern/index.html
+exec brave-browser --new-window https://d2l.ai/chapter_recurrent-modern/index.html
+exec insync start

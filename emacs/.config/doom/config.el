@@ -31,8 +31,12 @@
          (new-opacity (if (= current-opacity 100) 85 100)))
     (set-frame-parameter nil parameter new-opacity)))
 
-;; org
-(setq org-directory "~/org/")
+;; org & notes
+(setq org-directory "~/notes")
+(after! deft
+  (setq deft-directory "~/notes")
+  (setq deft-recursive t)
+  )
 
 (use-package! org
   :config
@@ -109,3 +113,12 @@
 (after! org
   (setq org-format-latex-options
         (plist-put org-format-latex-options :scale 2.5)))
+
+;; ledger
+(use-package! ledger-mode
+  :init
+  (setq ledget-clear-whole-transactions 1)
+
+  :config
+  (add-to-list 'evil-emacs-state-modes 'ledger-report-mode)
+  :mode "\\.lgr\\'")
