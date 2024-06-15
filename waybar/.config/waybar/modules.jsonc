@@ -7,7 +7,9 @@
     "rewrite": {
       "(.*) Mozilla Firefox": "<span color=\"#51afef\">󰈹</span> $1",
       "(.*) Doom Emacs": "<span color=\"#51afef\"></span> $1",
-      "(.*) NVIM": "<span color=\"#51afef\"></span> $1"
+      "(.*) NVIM": "<span color=\"#51afef\"></span> $1",
+      "(.*) Brave": "<span color=\"#51afef\"></span> $1",
+      "(.*) Google Chrome": "<span color=\"#51afef\">󰊯</span> $1"
     }
   },
   "sway/mode": {
@@ -25,6 +27,9 @@
     "icon-size": 21,
     "spacing": 10
   },
+  "bluetooth": {
+    "format": 10
+  },
   "clock": {
     "interval": 1,
     "format": "<span color=\"#51afef\"></span>  {:%H : %M : %S}",
@@ -38,9 +43,8 @@
 
   "clock#date": {
     "interval": 10,
-    "format": "  {:%b %e %Y}", // Icon: calendar-alt
+    "format": "  {:%b %e %Y}",
     "tooltip-format": "{:%B %e %Y}"
-    // "on-click": "~/work/scripts/popup-calendar.sh --popup"
   },
   "cpu": {
     "format": "<span color=\"#51afef\"></span>  {usage}%"
