@@ -22,6 +22,7 @@
        zen               ; distraction-free coding or writing
 
        :editor
+       parinfer
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
        fold              ; (nigh) universal code folding
@@ -105,7 +106,7 @@
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
-       (org +pandoc +pretty)               ; organize your plain life in plain text
+       (org +pandoc +pretty +roam2)               ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional

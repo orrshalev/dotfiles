@@ -35,8 +35,8 @@
 (setq org-directory "~/notes")
 (after! deft
   (setq deft-directory "~/notes")
-  (setq deft-recursive t)
-  )
+  (setq deft-recursive t))
+
 
 (use-package! org
   :config
@@ -50,6 +50,33 @@
 (map! :leader
       (:prefix ("t" . "toggle")
        :desc "Opaque" "o" #'toggle-frame-opacity))
+
+;; roam
+
+(use-package! org-roam
+  :custom
+  (org-roam-directory "~/Documents/Roam")
+  (org-roam-capture-templates
+   '(("d" "default" plain
+      "%?"
+      :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ("j" "journal" plain
+      "This is a journal: %?"
+      :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ("p" "project" plain
+      "* Goals\n\n%?\n\n* Task\n\n** TODO Add initial tasks\n\n* Dates\n\n"
+      :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Project")
+      :unnarrowed t))))
+
+(after! org
+  (setq org-roam-dailies-directory "Journal/"))
+
+
+
+
+
 
 ;; copilot
 

@@ -13,7 +13,7 @@
     }
   },
   "sway/mode": {
-    "format": "<span style=\"italic\"><span color=\"#51afef\"></span>  {}</span>", // Icon: expand-arrows-alt
+    "format": "<span style=\"italic\"><span color=\"#51afef\"></span>  {}</span>",
     "tooltip": false
   },
   "idle_inhibitor": {
