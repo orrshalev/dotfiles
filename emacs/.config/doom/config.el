@@ -58,24 +58,21 @@
   (org-roam-directory "~/Documents/Roam")
   (org-roam-capture-templates
    '(("d" "default" plain
-      "%?"
-      :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
-      :unnarrowed t)
-     ("j" "journal" plain
-      "This is a journal: %?"
+      "%<I:%M %p> %?"
       :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
      ("p" "project" plain
-      "* Goals\n\n%?\n\n* Task\n\n** TODO Add initial tasks\n\n* Dates\n\n"
+      (file "~/Documents/Roam/Templates/project.org")
       :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Project")
       :unnarrowed t))))
 
 (after! org
-  (setq org-roam-dailies-directory "Journal/"))
-
-
-
-
+  (setq org-roam-dailies-directory "Journal/")
+  (setq org-roam-dailies-capture-templates
+        '(("d" "default" entry
+           "%?"
+           :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d>\n\n* Habits\n\n- [ ] Learn Something new\n\n- [ ] Do something creative\n\n- [ ] Meditate in the morning first thing\n\n* Journal\n\n")
+           :unnarrowed t))))
 
 
 ;; copilot
