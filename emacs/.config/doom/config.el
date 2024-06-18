@@ -58,7 +58,7 @@
   (org-roam-directory "~/Documents/Roam")
   (org-roam-capture-templates
    '(("d" "default" plain
-      "%<I:%M %p> %?"
+      "%?"
       :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
      ("p" "project" plain
@@ -66,12 +66,18 @@
       :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Project")
       :unnarrowed t))))
 
+(defun orr/get-string-from-file (filePath)
+  "Return file content as string."
+  (with-temp-buffer
+    (insert-file-contents filePath)
+    (buffer-string)))
+
 (after! org
   (setq org-roam-dailies-directory "Journal/")
   (setq org-roam-dailies-capture-templates
-        '(("d" "default" entry
-           "%?"
-           :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d>\n\n* Habits\n\n- [ ] Learn Something new\n\n- [ ] Do something creative\n\n- [ ] Meditate in the morning first thing\n\n* Journal\n\n")
+        `(("d" "default" entry
+           "* %<%I:%M %p>\n%?"
+           :target (file+head "%<%Y-%m-%d>.org" ,(orr/get-string-from-file "~/Documents/Roam/Journal/Templates/default-start.org"))
            :unnarrowed t))))
 
 
@@ -146,3 +152,5 @@
   :config
   (add-to-list 'evil-emacs-state-modes 'ledger-report-mode)
   :mode "\\.lgr\\'")
+
+(global-auto-revert-mode 1)
