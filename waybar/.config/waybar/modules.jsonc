@@ -32,19 +32,7 @@
   },
   "clock": {
     "interval": 1,
-    "format": "<span color=\"#51afef\"></span>  {:%H : %M : %S}",
-    "format-alt": "<span color=\"#51afef\"></span>  {:%m / %d / %Y}"
-  },
-  "clock#time": {
-    "interval": 1,
-    "format": "{:%H:%M:%S}",
-    "tooltip": false
-  },
-
-  "clock#date": {
-    "interval": 10,
-    "format": "  {:%b %e %Y}",
-    "tooltip-format": "{:%B %e %Y}"
+    "format": "<span color=\"#51afef\"></span>  {:%H : %M : %S  |  <span color=\"#51afef\"></span> %m / %d / %Y}"
   },
   "cpu": {
     "format": "<span color=\"#51afef\"></span>  {usage}%"
