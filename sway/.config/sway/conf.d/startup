@@ -9,5 +9,5 @@ exec /var/lib/flatpak/app/com.spotify.Client/current/active/export/bin/com.spoti
 workspace 1
 exec kitty
 workspace 7
-exec brave-browser --new-window https://d2l.ai/chapter_recurrent-modern/index.html
+exec brave-browser
 exec insync start
