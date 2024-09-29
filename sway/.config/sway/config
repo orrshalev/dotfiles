@@ -44,13 +44,14 @@ bindsym $mod+b exec $browser
 
 bindsym $mod+q exec qutebrowser
 
+# Clipboard manager
+bindsym $mod+c exec copyq show
+
 # Kill focused window
-bindsym $mod+c kill
+bindsym $mod+w kill
 
 # Start your launcher
-bindsym $mod+w exec $menu
-
-bindsym $mod+z exec systemctl suspend
+bindsym $mod+d exec $menu
 
 # Start emacs
 bindsym $mod+e exec emacsclient -c -a ""
@@ -179,6 +180,7 @@ mode "power" {
     bindsym p exec systemctl poweroff
     bindsym r exec reboot
     bindsym e exec swaymsg exit
+    bindsym z exec systemctl suspend
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
