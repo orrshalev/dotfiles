@@ -5,11 +5,13 @@
     "max-length": 30,
     "all-outputs": true,
     "rewrite": {
-      "(.*) Mozilla Firefox": "<span color=\"#51afef\">󰈹</span> $1",
+      "(.*) \\- Mozilla Firefox": "<span color=\"#51afef\">󰈹</span> $1",
       "(.*) Doom Emacs": "<span color=\"#51afef\"></span> $1",
-      "(.*) NVIM": "<span color=\"#51afef\"></span> $1",
-      "(.*) Brave": "<span color=\"#51afef\"></span> $1",
-      "(.*) Google Chrome": "<span color=\"#51afef\">󰊯</span> $1"
+      "(.*) \\- NVIM": "<span color=\"#51afef\"></span> $1",
+      "(.*) \\- Visual Studio Code": "<span color=\"#51afef\">󰨞</span> $1",
+      "(.*) \\- Brave": "<span color=\"#51afef\"></span> $1",
+      "(.*) \\- qutebrowser": "<span color=\"#51afef\"></span> $1",
+      "(.*) \\- Google Chrome": "<span color=\"#51afef\">󰊯</span> $1"
     }
   },
   "sway/mode": {

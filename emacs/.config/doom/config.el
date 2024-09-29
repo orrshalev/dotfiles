@@ -72,13 +72,13 @@
     (insert-file-contents filePath)
     (buffer-string)))
 
-(after! org
-  (setq org-roam-dailies-directory "Journal/")
-  (setq org-roam-dailies-capture-templates
-        `(("d" "default" entry
-           "* %<%I:%M %p>\n%?"
-           :target (file+head "%<%Y-%m-%d>.org" ,(orr/get-string-from-file "~/Documents/Roam/Journal/Templates/default-start.org"))
-           :unnarrowed t))))
+;; (after! org
+;;   (setq org-roam-dailies-directory "Journal/")
+;;   (setq org-roam-dailies-capture-templates
+;;         `(("d" "default" entry
+;;            "* %<%I:%M %p>\n%?"
+;;            :target (file+head "%<%Y-%m-%d>.org" ,(orr/get-string-from-file "~/Documents/Roam/Journal/Templates/default-start.org"))
+;;            :unnarrowed t))))
 
 
 ;; copilot

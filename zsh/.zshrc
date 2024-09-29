@@ -52,6 +52,7 @@ source "$HOME/.config/op/plugins.sh" &> /dev/null # OnePassword, idc if this fai
 source "$HOME/.config/zsh/adons.zsh"
 source "$HOME/.config/zsh/vim.zsh"
 source "$HOME/.config/zsh/keybindings.zsh"
+source "$HOME/.config/zsh/secrets.zsh"
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -67,3 +68,14 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 source <(fzf --zsh)
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/oshalev/.bun/_bun" ] && source "/home/oshalev/.bun/_bun"
+. "/home/oshalev/.deno/env"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/oshalev/.sdkman"
+[[ -s "/home/oshalev/.sdkman/bin/sdkman-init.sh" ]] && source "/home/oshalev/.sdkman/bin/sdkman-init.sh"

@@ -37,11 +37,12 @@ bar {
 # Basics:
 #
 # Start a terminal
-bindsym $mod+q exec $term
+bindsym $mod+t exec $term
 
 # Start your browser
 bindsym $mod+b exec $browser
 
+bindsym $mod+q exec qutebrowser
 
 # Kill focused window
 bindsym $mod+c kill
@@ -133,7 +134,7 @@ bindsym $mod+m splith
 bindsym $mod+v splitv
 
 bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
+bindsym $mod+ctrl+t layout tabbed
 bindsym $mod+Shift+t layout toggle split
 
 bindsym $mod+f fullscreen
